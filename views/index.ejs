@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab Equipment Manager</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Lab Equipment Manager</h1>
+        <p>Manage and track lab equipment easily. Students can borrow equipment and admins can monitor usage.</p>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- LOGIN SECTION -->
+        <div class="login-section">
+            <div class="section-title">Login</div>
+<button onclick="location.href='/student-login'">Student Login</button>
+<button onclick="location.href='/admin-login'">Admin/Teacher Login</button>
+
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <div class="about-section">
+            <div class="section-title">About the Creators</div>
+            <button onclick="toggleAbout()">Show</button>
+            <div id="aboutText">
+                <p>This project was created by Saharsh and team as a Lab Equipment Management System for VIT students.</p>
+            </div>
+        </div>
+
+<!-- FEEDBACK SECTION -->
+<div class="feedback-section">
+    <div class="section-title">Feedback</div>
+
+    <!-- Display success message -->
+<% if (successMessage) { %>
+    <p style="color:green;"><%= successMessage %></p>
+<% } %>
+
+
+
+    <form action="/submit-feedback" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="comment" placeholder="Your Feedback" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+        <!-- CONTACT SECTION -->
+<div class="contact-section">
+    <div class="section-title">Contact Us</div>
+    <p>Email: <a href="mailto:labmanager@gmail.com">labmanager@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919876543210">+91 9876543210</a></p>
+    <p>Address: VIT University, Vellore</p>
+</div>
+
+
+    </div>
+
+    <script>
+        function toggleAbout() {
+            const about = document.getElementById('aboutText');
+            if (about.style.display === 'none' || about.style.display === '') {
+                about.style.display = 'block';
+            } else {
+                about.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

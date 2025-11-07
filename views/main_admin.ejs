@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/main_admin.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Welcome, <%= adminName %>!</h1>
+        
+        <!-- Lab Management Section -->
+        <h3 class="mb-3">Manage Labs</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
+
+            <!-- Physics Lab -->
+            <div class="col">
+                <div class="card lab-card text-center" onclick="location.href='/admin/physics'">
+                    <div class="card-body">
+                        <img src="/images/image1.jpeg" alt="Physics Lab" class="lab-icon mb-2">
+                        <h5 class="card-title">Physics Lab</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chemistry Lab -->
+            <div class="col">
+                <div class="card lab-card text-center" onclick="location.href='/admin/chemistry'">
+                    <div class="card-body">
+                        <img src="/images/image2.jpeg" alt="Chemistry Lab" class="lab-icon mb-2">
+                        <h5 class="card-title">Chemistry Lab</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biology Lab -->
+            <div class="col">
+                <div class="card lab-card text-center" onclick="location.href='/admin/biology'">
+                    <div class="card-body">
+                        <img src="/images/image3.jpeg" alt="Biology Lab" class="lab-icon mb-2">
+                        <h5 class="card-title">Biology Lab</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electronics Lab -->
+            <div class="col">
+                <div class="card lab-card text-center" onclick="location.href='/admin/electronics'">
+                    <div class="card-body">
+                        <img src="/images/image4.jpeg" alt="Electronics Lab" class="lab-icon mb-2">
+                        <h5 class="card-title">Electronics Lab</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Venue Section -->
+        <h3 class="mb-3">Venue Management</h3>
+        <div class="d-flex justify-content-start mb-5">
+            <!-- Updated route for admin -->
+            <a href="/admin/venue" class="btn btn-success btn-lg">View Venues</a>
+        </div>
+
+        <!-- Feedback Section -->
+        <h3 class="mb-3">Feedback</h3>
+        <div class="d-flex justify-content-start">
+            <a href="/admin/feedback" class="btn btn-primary btn-lg">View Feedback</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

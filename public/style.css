@@ -1,0 +1,138 @@
+/* ---------------------- GENERAL STYLING ---------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Gradient background */
+    background: linear-gradient(135deg, #8006f3, #4facf7);
+    
+    background-attachment: fixed; /* keeps gradient fixed on scroll */
+    color: black; /* change text color for contrast */
+}
+
+
+/* ---------------------- HEADER ---------------------- */
+header {
+    background: linear-gradient(90deg, #0077cc, #005fa3);
+    color: black;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* ---------------------- CONTAINER ---------------------- */
+.container {
+    display: flex;
+    flex-direction: column; /* vertical layout */
+    align-items: center;
+    max-width: 900px;
+    margin: 40px auto;
+    gap: 30px; /* spacing between sections */
+}
+
+/* ---------------------- SECTIONS ---------------------- */
+.login-section, 
+.about-section, 
+.feedback-section, 
+.contact-section {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-section:hover, 
+.about-section:hover, 
+.feedback-section:hover, 
+.contact-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 22px;
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 5px;
+}
+
+/* ---------------------- BUTTONS ---------------------- */
+button {
+    padding: 12px 25px;
+    margin: 8px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #0077cc;
+    color: white;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #005fa3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ---------------------- FEEDBACK FORM ---------------------- */
+.feedback-section input, 
+.feedback-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.feedback-section button {
+    background-color: #28a745;
+}
+
+.feedback-section button:hover {
+    background-color: #218838;
+}
+
+/* ---------------------- CONTACT SECTION ---------------------- */
+.contact-section p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* ---------------------- ABOUT TOGGLE ---------------------- */
+#aboutText {
+    margin-top: 10px;
+    display: none;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* <link rel="stylesheet" href="/style.css">
+
+<link rel="stylesheet" href="public/style.css"> */

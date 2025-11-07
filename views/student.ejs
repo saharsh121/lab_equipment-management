@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Login</h1>
+        <p>Enter your credentials to access the lab equipment system.</p>
+    </header>
+
+    <div class="container">
+        <div class="login-section">
+            <div class="section-title">Login</div>
+            
+            <!-- Display error message -->
+            <% if (error) { %>
+                <p style="color:red;"><%= error %></p>
+            <% } %>
+
+            <form action="/student-login" method="POST">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

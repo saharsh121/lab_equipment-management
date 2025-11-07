@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Lab Records - Admin</title>
+<!-- Bootstrap CSS CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+    /* Row coloring */
+    .status-ok td { background-color: #d4edda !important; }      /* Green for on-time */
+    .status-late td { background-color: #f8d7da !important; }    /* Red for late/overdue */
+    
+    .table-container {
+        max-height: 500px;     
+        overflow-y: auto;      
+        border: 1px solid #dee2e6;
+    }
+
+    /* Keep table headers sticky while scrolling */
+    .table-container thead th {
+        position: sticky;
+        top: 0;
+        background-color: #343a40;
+        color: #fff;
+        z-index: 10;
+    }
+</style>
+</head>
+<body>
+<div class="container mt-5">
+
+<h2 class="mb-4">Physics Lab Records</h2>
+
+<div class="table-container">
+    <table class="table table-bordered mb-0">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Student Name</th>
+                <th>Equipment</th>
+                <th>Date Taken</th>
+                <th>Expected Return</th>
+                <th>Returned Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% studentsRecords.forEach(function(rec, index) { 
+                let today = new Date().getTime();
+                let returningDate = new Date(rec.return_expected).getTime();
+                let returnedDate = rec.returned_at ? new Date(rec.returned_at).getTime() : null;
+
+                let rowClass = '';
+                if(returnedDate) {
+                    rowClass = returnedDate <= returningDate ? 'status-ok' : 'status-late';
+                } else {
+                    rowClass = today > returningDate ? 'status-late' : 'status-ok';
+                }
+
+                const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit' };
+            %>
+            <tr class="<%= rowClass %>">
+                <td><%= index + 1 %></td>
+                <td><%= rec.student_name %></td>
+                <td><%= rec.equipment_name %></td>
+                <td><%= new Date(rec.issued_at).toLocaleString('en-IN', options) %></td>
+                <td><%= new Date(rec.return_expected).toLocaleString('en-IN', options) %></td>
+                <td><%= rec.returned_at ? new Date(rec.returned_at).toLocaleString('en-IN', options) : 'Not Returned' %></td>
+                <td>
+                    <%= returnedDate 
+                        ? (returnedDate <= returningDate ? 'Returned on Time' : 'Returned Late')
+                        : (today > returningDate ? 'Overdue' : 'Pending') %>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<div class="mt-4">
+    <a href="/admin" class="btn btn-secondary">Back to Dashboard</a>
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
