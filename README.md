@@ -1,5 +1,6 @@
 # lab_equipment-management
-A website that manage lab equipment
+A website that manage lab equipment 
+creatred by saharsh ojha.
 
 
 
