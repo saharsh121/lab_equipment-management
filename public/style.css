@@ -1,3 +1,4 @@
+
 /* ---------------------- GENERAL STYLING ---------------------- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,6 +10,7 @@ body {
     background-attachment: fixed; /* keeps gradient fixed on scroll */
     color: black; /* change text color for contrast */
 }
+
 
 
 /* ---------------------- HEADER ---------------------- */
@@ -31,6 +33,7 @@ header p {
     margin-top: 10px;
 }
 
+
 /* ---------------------- CONTAINER ---------------------- */
 .container {
     display: flex;
@@ -40,6 +43,7 @@ header p {
     margin: 40px auto;
     gap: 30px; /* spacing between sections */
 }
+
 
 /* ---------------------- SECTIONS ---------------------- */
 .login-section, 
@@ -70,6 +74,7 @@ header p {
     padding-bottom: 5px;
 }
 
+
 /* ---------------------- BUTTONS ---------------------- */
 button {
     padding: 12px 25px;
@@ -88,6 +93,7 @@ button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
 
 /* ---------------------- FEEDBACK FORM ---------------------- */
 .feedback-section input, 
@@ -108,11 +114,13 @@ button:hover {
     background-color: #218838;
 }
 
+
 /* ---------------------- CONTACT SECTION ---------------------- */
 .contact-section p {
     margin: 8px 0;
     font-size: 16px;
 }
+
 
 /* ---------------------- ABOUT TOGGLE ---------------------- */
 #aboutText {
@@ -121,6 +129,7 @@ button:hover {
     font-size: 15px;
     line-height: 1.6;
 }
+
 
 /* ---------------------- RESPONSIVE ---------------------- */
 @media (max-width: 768px) {
@@ -131,6 +140,14 @@ button:hover {
         font-size: 32px;
     }
 }
+
+
+
+
+
+
+
+
 
 
 /* <link rel="stylesheet" href="/style.css">
