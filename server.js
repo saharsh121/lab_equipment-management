@@ -22,6 +22,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 
 
+
 // -------------------- DATABASE --------------------
 const db = mysql.createConnection({
     host: 'localhost',
@@ -34,6 +35,7 @@ db.connect((err) => {
     if (err) console.log('DB connection failed:', err);
     else console.log('Connected to MySQL database!');
 });
+
 
 // -------------------- ROUTES --------------------
 
@@ -53,6 +55,7 @@ app.get('/admin-login', (req, res) => {
 });
 
 // -------------------- LOGIN POST ROUTES --------------------
+
 
 // Student login POST
 app.post('/student-login', (req, res) => {
