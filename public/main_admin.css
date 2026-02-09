@@ -1,3 +1,9 @@
+
+
+
+
+
+
 /* --------------------------- Lab Cards on Dashboard --------------------------- */
 
 .lab-card {
@@ -50,7 +56,7 @@
 .lab-icon {
     width: 100px;
     height: 100px;
-    object-fit: cover;  /* ensures image stays inside boundary */
+    object-fit: cover;
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 3px solid rgba(0,0,0,0.05);
@@ -61,7 +67,12 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Responsive tweaks */
+
+
+
+
+
+
 @media (max-width: 992px) {
     .lab-icon {
         width: 80px;

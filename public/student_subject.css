@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 /* --------------------------- General Styles --------------------------- */
 
 body {
@@ -16,6 +25,14 @@ body {
     padding: 20px;
 }
 
+
+
+
+
+
+
+
+
 /* --------------------------- Headers --------------------------- */
 
 h2, h3 {
@@ -30,6 +47,18 @@ h3 {
     margin-top: 40px;
     margin-bottom: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* --------------------------- Lab Card Grid --------------------------- */
 
@@ -98,6 +127,14 @@ h3 {
     transform: scale(1.1) rotate(5deg);
 }
 
+
+
+
+
+
+
+
+
 /* --------------------------- Forms --------------------------- */
 
 form {
@@ -133,6 +170,13 @@ input[type="number"]:focus, input[type="datetime-local"]:focus, select:focus {
     box-shadow: 0 0 6px rgba(30,58,138,0.15);
 }
 
+
+
+
+
+
+
+
 /* --------------------------- Buttons --------------------------- */
 
 button.btn {
@@ -166,6 +210,10 @@ button.btn-success:hover {
     transform: scale(1.03);
 }
 
+
+
+
+
 /* --------------------------- Messages --------------------------- */
 
 p.text-muted {
@@ -178,6 +226,10 @@ p.text-center {
     font-weight: 500;
     font-size: 15px;
 }
+
+
+
+
 
 /* --------------------------- Responsive --------------------------- */
 
